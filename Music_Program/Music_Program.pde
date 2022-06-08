@@ -115,12 +115,18 @@ if(key=='r' || key=='R') song[currentSong].skip(-1000);
   
   if(key=='n' || key=='N') {
     if( song[currentSong].isPlaying() ) {
-    
-    }else{
-      currentSong++;
-    }
+  song[currentSong].pause();
+  song[currentSong].rewind();
+      nextButtonArrayCatch();
+      song[currentSong].play();
+    } else{
+       song[currentSong].rewind();
+       nextButtonArrayCatch();
+         song[currentSong].play();
+       }
 }//End Next Button
 //
+if() {}//End Previous Button
 }//End keyPressed
 //
 void mousePressed() {
